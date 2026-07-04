@@ -186,7 +186,7 @@ body::before {
 /* Zoom the texture in on mobile so it doesn't stretch coarsely */
 @media (max-width: 767px) {
   body::before {
-    background-size: 300%;
+    background-size: 400%;
   }
 }
 
@@ -206,6 +206,13 @@ body::after {
     right -10vw bottom -16vw; /* bottom-right, clipped */
   background-size: 50vw, 50vw;
   opacity: 0.5;
+}
+
+/* Bigger circle accents on mobile */
+@media (max-width: 767px) {
+  body::after {
+    background-size: 80vw, 80vw;
+  }
 }
 
 @theme inline {
