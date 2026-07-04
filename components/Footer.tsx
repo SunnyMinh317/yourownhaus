@@ -61,7 +61,7 @@ export default function Footer() {
             Liên hệ
           </h3>
           <address className="not-italic flex flex-col gap-2 text-sm leading-relaxed text-fg/80">
-            <span>123 Đường Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</span>
+            <span>184 Vương Thừa Vũ , Hà Nội, Việt Nam</span>
             <a href="tel:+84901234567" className="hover:text-theme transition-colors">
               +84 90 123 4567
             </a>

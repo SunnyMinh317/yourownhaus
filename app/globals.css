@@ -211,7 +211,7 @@ body::after {
 /* Bigger circle accents on mobile */
 @media (max-width: 767px) {
   body::after {
-    background-size: 80vw, 80vw;
+    background-size: 100vw, 100vw;
   }
 }
 
