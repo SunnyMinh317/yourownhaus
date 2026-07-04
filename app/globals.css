@@ -11,22 +11,28 @@
   --font-brasika: var(--font-brasika-display);
 }
 
-/* Hero headline clip-reveal on load */
+/* Hero headline clip-reveal on load.
+   The reveal starts below the mask (translateY) and rises to 0. The offset must
+   clear the mask's padding-bottom below, or the text peeks out before rising. */
 @keyframes line-rise {
-  from { transform: translateY(110%); }
+  from { transform: translateY(130%); }
   to   { transform: translateY(0); }
 }
 
 .line-mask {
   overflow: hidden;
-  /* clip so descenders never peek above the mask edge */
+  /* Breathing room so tall letters / descenders (e.g. the "y" in "story") aren't
+     clipped by overflow:hidden when the headline uses a tight line-height.
+     Matching negative margins keep the mask layout-neutral. */
   padding-top: 0.05em;
   margin-top: -0.05em;
+  padding-bottom: 1.5rem;
+  margin-bottom: -1.5rem;
 }
 
 .line-rise {
   display: inline-block;
-  transform: translateY(110%);
+  transform: translateY(130%);
   animation: line-rise 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
@@ -65,6 +71,99 @@
   animation: scroll-nudge 1.8s ease-in-out infinite;
 }
 
+/* Scroll reveal — elements rise + fade in when scrolled into view.
+   Add `reveal` to an element; <ScrollReveal> adds `is-visible` on entry.
+   Stagger siblings with Tailwind `[--reveal-delay:120ms]` or an inline
+   `--reveal-delay` style. */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Splash screen — the logo rises in behind a mask, descends back out behind it,
+   then the whole screen fades to reveal the site. Shown once per browser
+   session; the inline gate script lives in components/Splash.tsx. */
+#splash {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+  pointer-events: none;
+  animation: splash-fade 0.6s cubic-bezier(0.22, 1, 0.36, 1) 2.7s forwards;
+}
+
+/* Returning session / reduced motion: hide instantly, no flash, no animation. */
+html.splash-seen #splash {
+  display: none;
+}
+
+/* Lock scrolling while the splash plays. */
+html.splash-active,
+html.splash-active body {
+  overflow: hidden;
+}
+
+.splash-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  font-size: clamp(3rem, 13vw, 8.5rem);
+}
+
+.splash-mask {
+  overflow: hidden;
+  /* side room so wide caps (Y, W) aren't clipped horizontally by the mask */
+  padding-inline: 0.12em;
+  margin-inline: -0.12em;
+}
+
+.splash-word {
+  display: block;
+  transform: translateY(115%);
+  animation: splash-word 2.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* rise up into view, hold, then descend back out — all clipped by .splash-mask */
+@keyframes splash-word {
+  0%   { transform: translateY(115%); }
+  18%  { transform: translateY(0); }
+  70%  { transform: translateY(0); }
+  88%  { transform: translateY(115%); }
+  100% { transform: translateY(115%); }
+}
+
+@keyframes splash-fade {
+  to { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #splash {
+    display: none;
+  }
+}
+
 body {
   background-color: #EFEBDF;
   /* background-color: #1800f4; */
@@ -82,6 +181,13 @@ body::before {
   pointer-events: none;
   z-index: -1;
   background-blend-mode: multiply;
+}
+
+/* Zoom the texture in on mobile so it doesn't stretch coarsely */
+@media (max-width: 767px) {
+  body::before {
+    background-size: 300%;
+  }
 }
 
 /* Oversized circle accents, scattered into corners and clipped off-screen */

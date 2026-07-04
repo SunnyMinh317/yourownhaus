@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 
 const services = [
   {
@@ -27,7 +27,7 @@ export default function Services() {
     <section className="w-full flex flex-col">
       {/* Section heading */}
       <div className="px-10 md:px-16 lg:px-24 pt-24 md:pt-32 pb-12 md:pb-16 flex flex-col gap-4">
-        <h2 className="font-brasika text-fg leading-[0.95] text-5xl md:text-7xl max-w-4xl">
+        <h2 className="reveal font-brasika text-fg leading-[0.95] text-5xl md:text-7xl max-w-4xl">
           Dịch vụ của chúng tôi
         </h2>
       </div>
@@ -41,12 +41,14 @@ export default function Services() {
           onMouseEnter={() => setHovered(i)}
           onMouseLeave={() => setHovered((h) => (h === i ? null : h))}
           onMouseMove={(e) => setPos({ x: e.clientX, y: e.clientY })}
-          className={`group relative w-full md:w-1/2 min-h-[55vh] flex items-end overflow-hidden cursor-pointer ${
+          style={{ "--reveal-delay": `${i * 140}ms` } as CSSProperties}
+          className={`reveal group relative w-full md:w-1/2 min-h-[55vh] flex items-end overflow-hidden cursor-pointer ${
             i === 1 ? "border-t md:border-t-0 md:border-l border-fg/10" : ""
           }`}
         >
-          {/* Sliding image — starts above the panel, slides down on hover */}
-          <div className="absolute inset-0 -translate-y-full transition-transform duration-[900ms] ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:translate-y-0">
+          {/* Sliding image — on mobile it's always shown; on md+ it starts above
+              the panel and slides down on hover */}
+          <div className="absolute inset-0 translate-y-0 md:-translate-y-full transition-transform duration-[900ms] ease-[cubic-bezier(0.65,0,0.35,1)] md:group-hover:translate-y-0">
             <Image
               src={s.img}
               alt={s.title}
@@ -59,16 +61,16 @@ export default function Services() {
           </div>
 
           {/* Index eyebrow — near the top */}
-          <span className="font-brasika absolute top-10 md:top-14 left-10 md:left-14 z-10 text-2xl font-medium text-fg/60 transition-colors duration-500 group-hover:text-white/80">
+          <span className="font-brasika absolute top-10 md:top-14 left-10 md:left-14 z-10 text-2xl font-medium text-white/80 md:text-fg/60 transition-colors duration-500 md:group-hover:text-white/80">
             [ {i + 1} ]
           </span>
 
           {/* Content */}
           <div className="relative z-10 p-10 md:p-14 flex flex-col gap-3">
-            <h3 className="font-brasika leading-[1.05] text-4xl md:text-5xl lg:text-6xl text-fg transition-colors duration-500 group-hover:text-white">
+            <h3 className="font-brasika leading-[1.05] text-4xl md:text-5xl lg:text-6xl text-white md:text-fg transition-colors duration-500 md:group-hover:text-white">
               {s.title}
             </h3>
-            <p className="max-w-md text-sm md:text-base text-fg/70 transition-colors duration-500 group-hover:text-white/80">
+            <p className="max-w-md text-sm md:text-base text-white/80 md:text-fg/70 transition-colors duration-500 md:group-hover:text-white/80">
               {s.subtitle}
             </p>
           </div>

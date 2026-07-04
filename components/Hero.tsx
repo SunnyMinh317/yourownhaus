@@ -112,15 +112,15 @@ export default function Hero() {
       </div>
 
       {/* Foreground headline */}
-      <div className="relative z-10 w-full px-12 md:px-20 flex flex-col gap-20 pointer-events-none">
-        <span className="line-mask block text-left">
-          <span className="line-rise font-brasika text-theme leading-[0.9] text-[8rem] md:text-[11rem]">
+      <div className="relative z-10 w-full px-12 md:px-20 flex flex-col gap-5 md:gap-20 pointer-events-none">
+        <span className="block text-center md:text-left">
+          <span className="line-rise font-brasika text-theme leading-[0.9] text-[4rem] md:text-[11rem]">
             we tell
           </span>
         </span>
-        <span className="line-mask block text-right">
+        <span className="block text-center md:text-right">
           <span
-            className="line-rise font-brasika text-theme leading-[0.9] text-[8rem] md:text-[11rem]"
+            className="line-rise font-brasika text-theme leading-[0.9] text-[4rem] md:text-[11rem]"
             style={{ animationDelay: "0.15s" }}
           >
             the story

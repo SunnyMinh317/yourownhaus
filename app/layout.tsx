@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ClickBurst from "@/components/ClickBurst";
 import Footer from "@/components/Footer";
+import Splash from "@/components/Splash";
 import { cn } from "@/lib/utils";
 
 const brasika = localFont({
@@ -35,8 +36,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" className={cn("h-full", brasika.variable, satoshi.variable)}>
+    <html
+      lang="vi"
+      className={cn("h-full", brasika.variable, satoshi.variable)}
+      suppressHydrationWarning
+    >
       <body className="min-h-full flex flex-col bg-bg text-fg antialiased">
+        <Splash />
         <Navbar />
         {children}
         <Footer />

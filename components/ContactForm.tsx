@@ -27,13 +27,13 @@ export default function ContactForm() {
       {/* Content — top right */}
       <div className="relative z-10 w-full flex justify-end">
         <div className="w-full max-w-3xl flex flex-col gap-10 px-8 md:px-16 lg:px-24 pt-32 md:pt-40 pb-20 text-white">
-          <h2 className="font-brasika leading-[1.05] text-4xl md:text-5xl lg:text-6xl text-right">
+          <h2 className="reveal font-brasika leading-[1.05] text-4xl md:text-5xl lg:text-6xl text-right">
             Cùng chúng tôi thực hiện hóa ý tưởng của bạn
           </h2>
 
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="flex flex-col gap-7"
+            className="reveal [--reveal-delay:140ms] flex flex-col gap-7"
           >
             <input
               type="email"
@@ -54,7 +54,7 @@ export default function ContactForm() {
 
             <button
               type="submit"
-              className="self-end mt-2 bg-theme text-white px-10 py-3.5 text-sm uppercase tracking-widest hover:opacity-90 transition-opacity cursor-pointer"
+              className="self-end mt-2 bg-theme text-fg px-10 py-3.5 text-sm uppercase tracking-widest hover:opacity-90 transition-opacity cursor-pointer"
             >
               Gửi liên hệ
             </button>
