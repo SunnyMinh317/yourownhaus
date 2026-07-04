@@ -22,7 +22,12 @@
 
 # misc
 .DS_Store
+Thumbs.db
 *.pem
+
+# editor / IDE
+.idea
+*.swp
 
 # debug
 npm-debug.log*
