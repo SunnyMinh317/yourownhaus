@@ -79,9 +79,9 @@
   opacity: 0;
   transform: translateY(24px);
   transition:
-    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-  transition-delay: var(--reveal-delay, 0ms);
+    opacity 1.5s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 1000ms);
   will-change: opacity, transform;
 }
 
@@ -90,8 +90,20 @@
   transform: none;
 }
 
+/* Directional variants — slide in horizontally instead of rising. Pair with
+   `reveal` (which supplies the observer hook, the transition and the fade).
+   Offsets stay in-viewport so the observer still fires; body clips the bleed. */
+.reveal-left {
+  transform: translateX(-12vw);
+}
+.reveal-right {
+  transform: translateX(12vw);
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .reveal,
+  .reveal-left,
+  .reveal-right {
     opacity: 1;
     transform: none;
     transition: none;

@@ -23,8 +23,9 @@ export default function Quote2() {
       className="relative w-full min-h-dvh flex items-center justify-center"
       style={{ marginTop: `-${OVERLAP}` }}
     >
-      {/* Central band — group photo cropped to a horizontal strip */}
-      <div className="relative w-full h-[75vh] overflow-hidden">
+      {/* Central band — group photo cropped to a horizontal strip.
+          Sweeps in from the left when scrolled into view. */}
+      <div className="reveal reveal-left relative w-full h-[75vh] overflow-hidden">
         <Image
           src="/ui-images/home/quote2/group.jpg"
           alt=""
@@ -37,7 +38,7 @@ export default function Quote2() {
 
         {/* Quote text — left */}
         <div className="relative z-10 h-full flex items-center">
-          <p className="reveal max-w-3xl font-light px-8 md:px-16 lg:px-24 text-white/70 text-xl md:text-3xl leading-relaxed">
+          <p className="max-w-3xl font-light px-8 md:px-16 lg:px-24 text-white/70 text-xl md:text-3xl leading-relaxed">
             Mọi dự án của YourOwnHaus đều bắt đầu bằng một cuộc đối thoại – giữa
             đội ngũ với nhau, giữa đội ngũ với khách hàng, giữa ý tưởng với thực
             tế, và giữa những góc nhìn khác nhau hướng về cùng một mục tiêu.
@@ -45,9 +46,10 @@ export default function Quote2() {
         </div>
       </div>
 
-      {/* Profile — sized by height so he's taller than the band and sticks up */}
+      {/* Profile — sized by height so he's taller than the band and sticks up.
+          Moves in from the right (just after the banner) when scrolled into view. */}
       <div
-        className="reveal [--reveal-delay:150ms] hidden md:block absolute z-20 bottom-[12.5vh] pointer-events-none"
+        className="reveal reveal-right [--reveal-delay:150ms] hidden md:block absolute z-20 bottom-[12.5vh] pointer-events-none"
         style={{ right: GUY_RIGHT }}
       >
         <Image
