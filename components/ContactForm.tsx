@@ -18,7 +18,7 @@ export default function ContactForm() {
         alt=""
         fill
         sizes="100vw"
-        className="object-cover"
+        className="object-cover object-[center_100%]"
         style={{ filter: BG_FILTER }}
       />
       {/* Scrim for legibility */}

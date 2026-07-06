@@ -93,7 +93,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden flex items-center min-h-dvh">
+    <section className="relative overflow-hidden overflow-x-hidden flex items-center min-h-dvh">
 
       {/* Background marquee */}
       <div className="absolute inset-0 flex items-center">
