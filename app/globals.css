@@ -71,6 +71,22 @@
   animation: scroll-nudge 1.8s ease-in-out infinite;
 }
 
+/* Gentle horizontal float — used on tap-affordance chevrons */
+@keyframes float-x {
+  0%, 100% { transform: translateX(0); }
+  50%      { transform: translateX(5px); }
+}
+
+.float-x {
+  animation: float-x 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-x {
+    animation: none;
+  }
+}
+
 /* Scroll reveal — elements rise + fade in when scrolled into view.
    Add `reveal` to an element; <ScrollReveal> adds `is-visible` on entry.
    Stagger siblings with Tailwind `[--reveal-delay:120ms]` or an inline
@@ -217,13 +233,16 @@ body::after {
     left -12vw top -18vw,     /* top-left, clipped */
     right -10vw bottom -16vw; /* bottom-right, clipped */
   background-size: 50vw, 50vw;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 /* Bigger circle accents on mobile */
 @media (max-width: 767px) {
   body::after {
-    background-size: 100vw, 100vw;
+    background-position:
+    left -12vw top -18vw,     /* top-left, clipped */
+    right -20vw bottom -16vw; /* bottom-right, clipped */
+    background-size: 90vw, 110vw;
   }
 }
 

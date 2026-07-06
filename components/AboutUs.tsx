@@ -16,7 +16,7 @@ export default function AboutUs() {
       </div>
 
       {/* Text — right */}
-      <div className="w-full md:w-3/5 flex flex-col justify-center gap-8 px-10 md:px-16 lg:px-24 py-20">
+      <div className="w-full md:w-3/5 flex flex-col justify-center gap-8 px-10 md:px-16 lg:px-24 pt-20 pb-10 md:py-20">
         <h2 className="reveal [--reveal-delay:120ms] font-brasika text-fg leading-[1.05] text-5xl md:text-6xl lg:text-7xl">
           Nơi mỗi không gian kể một câu chuyện
         </h2>

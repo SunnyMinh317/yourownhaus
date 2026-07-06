@@ -20,7 +20,7 @@ const GUY_FILTER = "contrast(1) saturate(0.8) sepia(0.2) brightness(0.97)";
 export default function Quote2() {
   return (
     <section
-      className="relative w-full min-h-dvh flex items-center justify-center"
+      className="relative w-full md:min-h-dvh flex items-center justify-center"
       style={{ marginTop: `-${OVERLAP}` }}
     >
       {/* Central band — group photo cropped to a horizontal strip.
@@ -38,11 +38,24 @@ export default function Quote2() {
 
         {/* Quote text — left */}
         <div className="relative z-10 h-full flex items-center">
-          <p className="max-w-3xl font-light px-8 md:px-16 lg:px-24 text-white/70 text-xl md:text-3xl leading-relaxed">
-            Mọi dự án của YourOwnHaus đều bắt đầu bằng một cuộc đối thoại – giữa
-            đội ngũ với nhau, giữa đội ngũ với khách hàng, giữa ý tưởng với thực
-            tế, và giữa những góc nhìn khác nhau hướng về cùng một mục tiêu.
-          </p>
+          <div className="max-w-3xl px-8 md:px-16 lg:px-24 flex flex-col">
+
+            {/* Oversized opening quote mark, floating above the paragraph */}
+            <span
+              aria-hidden
+              className="reveal [--reveal-delay:80ms] font-brasika text-theme leading-none text-6xl md:text-8xl -mb-3 md:-mb-5"
+            >
+              &ldquo;
+            </span>
+
+            <p className="reveal [--reveal-delay:160ms] font-light text-white/70 text-xl md:text-3xl leading-relaxed">
+              Mọi dự án của YourOwnHaus đều bắt đầu bằng một{" "}
+              <span className="font-brasika text-theme">cuộc đối thoại</span> –
+              giữa đội ngũ với nhau, giữa đội ngũ với khách hàng, giữa ý tưởng
+              với thực tế, và giữa những góc nhìn khác nhau hướng về cùng một
+              mục tiêu.
+            </p>
+          </div>
         </div>
       </div>
 

@@ -128,9 +128,26 @@ export default function HighlightedProjects() {
             className="animate-in fade-in-0 slide-in-from-bottom-4 duration-700 ease-out flex flex-col gap-6 text-white"
           >
             <div className="flex flex-col gap-3">
-              <h2 className="font-brasika leading-[1.02] text-4xl md:text-7xl max-w-4xl">
-                {project.title}
-              </h2>
+              <div className="flex items-center gap-3">
+                <h2 className="font-brasika leading-[1.02] text-4xl md:text-7xl max-w-4xl">
+                  {project.title}
+                </h2>
+                {/* Mobile tap affordance — chevron beside the title */}
+                <svg
+                  aria-hidden="true"
+                  className="md:hidden float-x shrink-0 text-white"
+                  width="26"
+                  height="26"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </div>
               <p className="text-base md:text-lg text-white/70">
                 {project.location}
               </p>
