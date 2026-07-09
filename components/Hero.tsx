@@ -96,7 +96,7 @@ export default function Hero() {
     <section className="relative overflow-x-hidden flex items-center min-h-dvh">
 
       {/* Background marquee */}
-      <div className="absolute inset-0 flex items-center">
+      <div className="absolute inset-0 flex items-center overflow-x-hidden">
         <div
           ref={trackRef}
           className="flex whitespace-nowrap will-change-transform"

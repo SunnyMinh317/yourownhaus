@@ -20,7 +20,7 @@ const GUY_FILTER = "contrast(1) saturate(0.8) sepia(0.2) brightness(0.97)";
 export default function Quote2() {
   return (
     <section
-      className="relative w-full xl:min-h-dvh flex items-center justify-center"
+      className="relative w-full xl:min-h-dvh overflow-x-clip flex items-center justify-center"
       style={{ marginTop: `-${OVERLAP}` }}
     >
       {/* Central band — group photo cropped to a horizontal strip.
