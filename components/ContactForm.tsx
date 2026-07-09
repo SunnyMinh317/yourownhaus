@@ -26,14 +26,14 @@ export default function ContactForm() {
 
       {/* Content — top right */}
       <div className="relative z-10 w-full flex justify-end">
-        <div className="w-full max-w-3xl flex flex-col gap-10 px-8 md:px-16 lg:px-24 pt-32 md:pt-40 pb-20 text-white">
-          <h2 className="reveal font-brasika leading-[1.05] text-4xl md:text-5xl lg:text-6xl text-right">
-            Cùng chúng tôi thực hiện hóa ý tưởng của bạn
+        <div className="w-full flex flex-col gap-16 px-8 md:px-16 lg:px-24 pt-32 md:pt-40 pb-20 text-white">
+          <h2 className="reveal font-brasika leading-[1.05] text-[8vw] md:text-[5vw] lg:text-[4vw] text-right mb-20">
+            Cùng chúng tôi thực hiện hóa <br/> ý tưởng của bạn
           </h2>
 
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="reveal [--reveal-delay:140ms] flex flex-col gap-7"
+            className="reveal [--reveal-delay:140ms] w-full md:max-w-[60vw] lg:max-w-[50vw] self-end flex flex-col gap-7"
           >
             <input
               type="email"
@@ -41,7 +41,7 @@ export default function ContactForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Email của bạn"
-              className="bg-transparent border-b border-white/40 py-3 text-white placeholder-white/60 focus:outline-none focus:border-white transition-colors"
+              className="bg-transparent border-b border-white/40 py-3 text-[3.6vw] md:text-[1.6vw] lg:text-[1.2vw] text-white placeholder-white/60 focus:outline-none focus:border-white transition-colors"
             />
 
             <textarea
@@ -49,12 +49,12 @@ export default function ContactForm() {
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Lời nhắn của bạn"
               rows={4}
-              className="bg-transparent border-b border-white/40 py-3 text-white placeholder-white/60 focus:outline-none focus:border-white transition-colors resize-none"
+              className="bg-transparent border-b border-white/40 py-3 text-[3.6vw] md:text-[1.6vw] lg:text-[1.2vw] text-white placeholder-white/60 focus:outline-none focus:border-white transition-colors resize-none"
             />
 
             <button
               type="submit"
-              className="self-end mt-2 bg-theme text-fg px-10 py-3.5 text-sm uppercase tracking-widest hover:opacity-90 transition-opacity cursor-pointer"
+              className="self-end mt-2 bg-theme text-white px-[5vw] py-[2vw] md:px-[4vw] md:py-[1.5vw] lg:px-[3.4vw] lg:py-[1.5vw] text-[3vw] md:text-[1.7vw] lg:text-[1vw] uppercase tracking-widest hover:opacity-90 transition-opacity cursor-pointer mt-10"
             >
               Gửi liên hệ
             </button>

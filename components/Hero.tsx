@@ -106,21 +106,31 @@ export default function Hero() {
           onMouseLeave={() => (hoverRef.current = false)}
         >
           {/* Two identical halves — wrapping by one half-width loops seamlessly */}
-          <span className="font-brasika leading-none select-none text-[#F2DCAD]">{HALF}</span>
-          <span className="font-brasika leading-none select-none text-[#F2DCAD]">{HALF}</span>
+          <span
+            className="font-brasika leading-none select-none text-transparent"
+            style={{ WebkitTextStroke: "1px var(--color-theme)" }}
+          >
+            {HALF}
+          </span>
+          <span
+            className="font-brasika leading-none select-none text-transparent"
+            style={{ WebkitTextStroke: "1px var(--color-theme)" }}
+          >
+            {HALF}
+          </span>
         </div>
       </div>
 
       {/* Foreground headline */}
       <div className="relative z-10 w-full px-12 md:px-20 flex flex-col gap-5 md:gap-20 pointer-events-none">
         <span className="block text-center md:text-left">
-          <span className="line-rise font-brasika text-theme leading-[0.9] text-[4rem] md:text-[11rem]">
+          <span className="line-rise font-brasika text-theme leading-[0.9] text-[14vw] md:text-[12vw] lg:text-[10vw]">
             we tell
           </span>
         </span>
         <span className="block text-center md:text-right">
           <span
-            className="line-rise font-brasika text-theme leading-[0.9] text-[4rem] md:text-[11rem]"
+            className="line-rise font-brasika text-theme leading-[0.9] text-[14vw] md:text-[12vw] lg:text-[10vw]"
             style={{ animationDelay: "0.15s" }}
           >
             the story

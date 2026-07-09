@@ -82,7 +82,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-lg font-normal hover:text-theme transition-colors"
+                className="text-[2vw] md:text-[1.7vw] lg:text-[1.25vw] font-normal hover:text-theme transition-colors"
               >
                 {link.label}
               </Link>
@@ -90,7 +90,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex justify-center">
-            <Link href="/" className="font-brasika text-3xl text-theme select-none">
+            <Link href="/" className="font-brasika text-[3.4vw] md:text-[2.6vw] lg:text-[1.9vw] text-theme select-none">
               YOUR OWN HAUS
             </Link>
           </div>
@@ -100,7 +100,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-lg font-normal hover:text-theme transition-colors"
+                className="text-[2vw] md:text-[1.7vw] lg:text-[1.25vw] font-normal hover:text-theme transition-colors"
               >
                 {link.label}
               </Link>
@@ -114,7 +114,7 @@ export default function Navbar() {
               hamburger button's width */}
           <Link
             href="/"
-            className="font-brasika text-xl text-theme select-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            className="font-brasika text-[5vw] md:text-[2.4vw] lg:text-[1.8vw] text-theme select-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
           >
             YOUR OWN HAUS
           </Link>
@@ -148,7 +148,7 @@ export default function Navbar() {
           <Link
             href="/"
             onClick={() => setOpen(false)}
-            className="font-brasika text-xl text-theme select-none"
+            className="font-brasika text-[5vw] md:text-[2.4vw] lg:text-[1.8vw] text-theme select-none"
           >
             YOUR OWN HAUS
           </Link>
@@ -170,7 +170,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-4xl font-light text-fg"
+                className="text-[9vw] md:text-[5vw] lg:text-[4vw] font-light text-fg"
               >
                 {link.label}
               </Link>

@@ -37,10 +37,10 @@ const AUTOPLAY_MS = 10000;
 function Spec({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex flex-col gap-1.5">
-      <dt className="text-[0.7rem] uppercase tracking-[0.18em] text-white/50">
+      <dt className="text-[3vw] md:text-[1.1vw] lg:text-[0.8vw] uppercase tracking-[0.18em] text-white/50">
         {label}
       </dt>
-      <dd className="text-base md:text-lg text-white">{value}</dd>
+      <dd className="text-[3.6vw] md:text-[1.6vw] lg:text-[1.2vw] text-white">{value}</dd>
     </div>
   );
 }
@@ -73,7 +73,7 @@ export default function HighlightedProjects() {
     <section className="w-full">
       {/* Section title — above the carousel */}
       <div className="px-8 md:px-16 lg:px-24 pt-24 md:pt-32 pb-12 md:pb-16">
-        <h2 className="font-brasika text-fg leading-[0.95] text-5xl md:text-7xl">
+        <h2 className="font-brasika text-fg leading-[0.95] text-[9vw] md:text-[6.5vw] lg:text-[5vw]">
           Dự án nổi bật
         </h2>
       </div>
@@ -129,7 +129,7 @@ export default function HighlightedProjects() {
           >
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3">
-                <h2 className="font-brasika leading-[1.02] text-4xl md:text-7xl max-w-4xl">
+                <h2 className="font-brasika leading-[1.02] text-[9vw] md:text-[7vw] lg:text-[5.5vw]">
                   {project.title}
                 </h2>
                 {/* Mobile tap affordance — chevron beside the title */}
@@ -148,12 +148,12 @@ export default function HighlightedProjects() {
                   <polyline points="9 6 15 12 9 18" />
                 </svg>
               </div>
-              <p className="text-base md:text-lg text-white/70">
+              <p className="text-[3.6vw] md:text-[1.6vw] lg:text-[1.2vw] text-white/70">
                 {project.location}
               </p>
             </div>
 
-            <dl className="flex flex-wrap gap-x-12 gap-y-5 border-t border-white/20 pt-6 max-w-3xl">
+            <dl className="flex flex-wrap gap-x-12 gap-y-5 border-t border-white/20 pt-6">
               <Spec label="Loại hình" value={project.type} />
               <Spec label="Phong cách" value={project.style} />
               <Spec label="Diện tích" value={project.area} />
@@ -162,8 +162,8 @@ export default function HighlightedProjects() {
           </div>
 
           {/* Controls — counter + arrows (desktop only) */}
-          <div className="hidden md:flex items-center gap-5 shrink-0">
-            <span className="font-brasika text-lg tabular-nums text-white/85">
+          <div className="hidden md:flex items-center gap-7 shrink-0">
+            <span className="font-brasika text-[2vw] md:text-[1.7vw] lg:text-[1.5vw] tabular-nums text-white/85">
               {String(index + 1).padStart(2, "0")}
               <span className="text-white/40"> / {String(count).padStart(2, "0")}</span>
             </span>
@@ -172,17 +172,17 @@ export default function HighlightedProjects() {
                 type="button"
                 aria-label="Dự án trước"
                 onClick={prev}
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-white/40 text-white transition-colors hover:bg-white hover:text-black cursor-pointer"
+                className="flex h-[6vw] w-[6vw] md:h-[3.8vw] md:w-[3.8vw] lg:h-[3vw] lg:w-[3vw] items-center justify-center rounded-full border border-white/40 text-white transition-colors hover:bg-white hover:text-black cursor-pointer"
               >
-                <ArrowLeft size={20} strokeWidth={1.5} />
+                <ArrowLeft className="w-[45%] h-[45%]" strokeWidth={1.5} />
               </button>
               <button
                 type="button"
                 aria-label="Dự án tiếp theo"
                 onClick={next}
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-white/40 text-white transition-colors hover:bg-white hover:text-black cursor-pointer"
+                className="flex h-[6vw] w-[6vw] md:h-[3.8vw] md:w-[3.8vw] lg:h-[3vw] lg:w-[3vw] items-center justify-center rounded-full border border-white/40 text-white transition-colors hover:bg-white hover:text-black cursor-pointer"
               >
-                <ArrowRight size={20} strokeWidth={1.5} />
+                <ArrowRight className="w-[45%] h-[45%]" strokeWidth={1.5} />
               </button>
             </div>
           </div>
@@ -207,7 +207,7 @@ export default function HighlightedProjects() {
       {/* Custom follow cursor — mirrors the Services section */}
       <div
         aria-hidden="true"
-        className={`pointer-events-none fixed z-120 flex h-14 w-14 items-center justify-center rounded-full bg-theme text-white transition-[opacity,transform] duration-300 ease-out ${
+        className={`pointer-events-none fixed z-120 flex h-[7vw] w-[7vw] md:h-[4.5vw] md:w-[4.5vw] lg:h-[3.5vw] lg:w-[3.5vw] items-center justify-center rounded-full bg-theme text-white transition-[opacity,transform] duration-300 ease-out ${
           hovering ? "opacity-100" : "opacity-0"
         }`}
         style={{
@@ -217,8 +217,7 @@ export default function HighlightedProjects() {
         }}
       >
         <svg
-          width="22"
-          height="22"
+          className="w-[45%] h-[45%]"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"

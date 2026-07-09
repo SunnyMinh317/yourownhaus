@@ -19,17 +19,17 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="w-full border-t border-fg/10 px-8 md:px-16 lg:px-24 pt-20 pb-10 text-fg">
-      <div className="grid gap-12 md:grid-cols-3">
+      <div className="grid gap-12 md:grid-cols-[40vw_1fr_1fr]">
         {/* Brand */}
         <div className="flex flex-col gap-5">
-          <span className="font-brasika text-4xl text-theme leading-[1.05]">
+          <span className="font-brasika text-[8vw] md:text-[3.5vw] lg:text-[2.5vw] text-theme leading-[1.05]">
             YOUR
             <br />
             OWN
             <br />
             HAUS
           </span>
-          <p className="max-w-xs text-base leading-relaxed text-fg/60">
+          <p className="md:max-w-[30vw] text-[3.6vw] md:text-[1.4vw] lg:text-[1vw] leading-relaxed text-fg/60">
             Studio kiến trúc & thiết kế nội thất — kiến tạo những không gian kể
             nên câu chuyện của riêng bạn.
           </p>
@@ -57,10 +57,10 @@ export default function Footer() {
 
         {/* Contact */}
         <div className="flex flex-col gap-4">
-          <h3 className="text-xl md:text-2xl text-fg leading-tight">
+          <h3 className="text-[4.5vw] md:text-[2vw] lg:text-[1.4vw] text-fg leading-tight">
             Liên hệ
           </h3>
-          <address className="not-italic flex flex-col gap-2 text-sm leading-relaxed text-fg/80">
+          <address className="not-italic flex flex-col gap-2 text-[3.4vw] md:text-[1.3vw] lg:text-[0.95vw] leading-relaxed text-fg/80">
             <span>184 Vương Thừa Vũ , Hà Nội, Việt Nam</span>
             <a href="tel:+84901234567" className="hover:text-theme transition-colors">
               +84 90 123 4567
@@ -74,10 +74,10 @@ export default function Footer() {
 
         {/* Navigation */}
         <div className="flex flex-col gap-4">
-          <h3 className="text-xl md:text-2xl text-fg leading-tight">
+          <h3 className="text-[4.5vw] md:text-[2vw] lg:text-[1.4vw] text-fg leading-tight">
             Liên kết
           </h3>
-          <nav className="flex flex-col gap-2 text-sm">
+          <nav className="flex flex-col gap-2 text-[3.4vw] md:text-[1.3vw] lg:text-[0.95vw]">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -92,7 +92,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="mt-16 pt-8 border-t border-fg/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-fg/50">
+      <div className="mt-16 pt-8 border-t border-fg/10 flex flex-col md:flex-row items-center justify-between gap-4 text-[3.4vw] md:text-[1.3vw] lg:text-[0.95vw] text-fg/50">
         <span>© 2026 Your Own Haus. Bảo lưu mọi quyền.</span>
         <div className="flex items-center gap-6">
           <Link href="/chinh-sach-bao-mat" className="hover:text-theme transition-colors">
