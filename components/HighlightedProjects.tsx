@@ -73,7 +73,7 @@ export default function HighlightedProjects() {
     <section className="w-full">
       {/* Section title — above the carousel */}
       <div className="px-8 md:px-16 lg:px-24 pt-24 md:pt-32 pb-12 md:pb-16">
-        <h2 className="font-brasika text-fg leading-[0.95] text-[9vw] md:text-[6.5vw] lg:text-[5vw]">
+        <h2 className="font-brasika text-fg leading-[0.95] text-[8vw] md:text-[5.5vw] lg:text-[4.2vw]">
           Dự án nổi bật
         </h2>
       </div>

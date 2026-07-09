@@ -10,7 +10,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
-    <main className="flex flex-col flex-1">
+    <main className="flex flex-col flex-1 gap-12 md:gap-16">
       <Hero />
       <AboutUs />
       <Services />

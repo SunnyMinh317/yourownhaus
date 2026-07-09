@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutUs() {
   return (
-    <section className="min-h-dvh w-full flex flex-col xl:flex-row items-start">
+    <section className="xl:min-h-dvh w-full flex flex-col xl:flex-row items-start">
       {/* Image — left. Full-bleed to the screen edge on desktop, smaller width. */}
       <div className="reveal relative w-full aspect-4/2 xl:aspect-auto xl:w-2/3 xl:self-stretch">
         <Image
@@ -17,7 +17,7 @@ export default function AboutUs() {
 
       {/* Text — right */}
       <div className="w-full xl:w-3/5 flex flex-col justify-start gap-14 px-10 md:px-16 lg:px-24 pt-20 pb-10 xl:py-20">
-        <h2 className="reveal [--reveal-delay:120ms] font-brasika text-fg leading-[1.05] text-[9vw] md:text-[6.5vw] lg:text-[5vw]">
+        <h2 className="reveal [--reveal-delay:120ms] font-brasika text-fg leading-[1.05] text-[8vw] md:text-[5.5vw] lg:text-[4.2vw]">
           Nơi mỗi không gian kể một câu chuyện
         </h2>
 

@@ -93,14 +93,14 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden overflow-x-hidden flex items-center min-h-dvh">
+    <section className="relative overflow-x-hidden flex items-center min-h-dvh">
 
       {/* Background marquee */}
       <div className="absolute inset-0 flex items-center">
         <div
           ref={trackRef}
           className="flex whitespace-nowrap will-change-transform"
-          style={{ fontSize: "clamp(6rem, 18vw, 20rem)" }}
+          style={{ fontSize: "clamp(6rem, 18vw, 25rem)" }}
           aria-hidden="true"
           onMouseEnter={() => (hoverRef.current = true)}
           onMouseLeave={() => (hoverRef.current = false)}
@@ -108,13 +108,19 @@ export default function Hero() {
           {/* Two identical halves — wrapping by one half-width loops seamlessly */}
           <span
             className="font-brasika leading-none select-none text-transparent"
-            style={{ WebkitTextStroke: "1px var(--color-theme)" }}
+            style={{
+              WebkitTextStrokeWidth: "clamp(0.8px, 0.005em, 5px)",
+              WebkitTextStrokeColor: "var(--color-theme)",
+            }}
           >
             {HALF}
           </span>
           <span
             className="font-brasika leading-none select-none text-transparent"
-            style={{ WebkitTextStroke: "1px var(--color-theme)" }}
+            style={{
+              WebkitTextStrokeWidth: "clamp(1px, 0.005em, 5px)",
+              WebkitTextStrokeColor: "var(--color-theme)",
+            }}
           >
             {HALF}
           </span>

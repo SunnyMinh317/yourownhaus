@@ -38,7 +38,7 @@ export default function Quote2() {
 
         {/* Quote text — left */}
         <div className="relative z-10 h-full flex items-center">
-          <div className="xl:max-w-4xl px-8 md:px-16 lg:px-24 flex flex-col">
+          <div className="xl:max-w-[40vw] px-8 md:px-16 lg:px-24 flex flex-col">
 
             {/* Oversized opening quote mark, floating above the paragraph */}
             <span

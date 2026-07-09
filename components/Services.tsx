@@ -27,7 +27,7 @@ export default function Services() {
     <section className="w-full flex flex-col">
       {/* Section heading */}
       <div className="px-10 md:px-16 lg:px-24 pt-14 md:pt-32 pb-12 md:pb-16 flex flex-col gap-4">
-        <h2 className="reveal font-brasika text-fg leading-[0.95] text-[9vw] md:text-[6.5vw] lg:text-[5vw]">
+        <h2 className="reveal font-brasika text-fg leading-[0.95] text-[8vw] md:text-[5.5vw] lg:text-[4.2vw]">
           Dịch vụ của chúng tôi
         </h2>
       </div>
@@ -46,7 +46,7 @@ export default function Services() {
             i === 1 ? "border-t md:border-t-0 md:border-l border-fg/10" : ""
           }`}
         >
-          {/* Sliding image — always shown below xl; at xl+ it starts below the
+                    {/* Sliding image — always shown below xl; at xl+ it starts below the
               panel and slides up on hover */}
           <div className="absolute inset-0 translate-y-0 xl:translate-y-full transition-transform duration-[600ms] ease-[cubic-bezier(0.65,0,0.35,1)] xl:group-hover:translate-y-0">
             <Image
@@ -68,13 +68,13 @@ export default function Services() {
           {/* Content */}
           <div className="relative z-10 p-10 md:p-14 flex flex-col gap-3">
             <div className="flex items-center gap-3">
-              <h3 className="font-brasika leading-[1.05] text-[8vw] md:text-[5vw] lg:text-[4vw] text-white xl:text-fg transition-colors duration-500 xl:group-hover:text-white">
+              <h3 className="font-brasika leading-[1.05] text-[7vw] md:text-[4vw] lg:text-[2.8vw] text-white xl:text-fg transition-colors duration-500 xl:group-hover:text-white">
                 {s.title}
               </h3>
               {/* Mobile tap affordance — chevron beside the title */}
               <svg
                 aria-hidden="true"
-                className="xl:hidden float-x shrink-0 text-white"
+                className="md:hidden float-x shrink-0 text-white"
                 width="26"
                 height="26"
                 viewBox="0 0 24 24"
@@ -87,7 +87,7 @@ export default function Services() {
                 <polyline points="9 6 15 12 9 18" />
               </svg>
             </div>
-            <p className="text-[3.4vw] md:text-[1.5vw] lg:text-[1.3vw] text-white/80 xl:text-fg/70 transition-colors duration-500 xl:group-hover:text-white/80">
+            <p className="text-[3.4vw] md:text-[1.5vw] lg:text-[1.5vw] text-white/80 xl:text-fg/70 transition-colors duration-500 xl:group-hover:text-white/80">
               {s.subtitle}
             </p>
           </div>
@@ -98,7 +98,7 @@ export default function Services() {
       {/* Custom cursor arrow — follows the pointer while hovering a panel */}
       <div
         aria-hidden="true"
-        className={`pointer-events-none fixed z-[120] hidden xl:flex h-[7vw] w-[7vw] md:h-[4.5vw] md:w-[4.5vw] lg:h-[3.5vw] lg:w-[3.5vw] items-center justify-center rounded-full bg-theme text-white transition-[opacity,transform] duration-300 ease-out ${
+        className={`pointer-events-none fixed z-[120] flex h-[7vw] w-[7vw] md:h-[4.5vw] md:w-[4.5vw] lg:h-[3.5vw] lg:w-[3.5vw] items-center justify-center rounded-full bg-theme text-white transition-[opacity,transform] duration-300 ease-out ${
           hovered !== null ? "opacity-100" : "opacity-0"
         }`}
         style={{
@@ -108,7 +108,8 @@ export default function Services() {
         }}
       >
         <svg
-          className="w-[45%] h-[45%]"
+          width="22"
+          height="22"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"

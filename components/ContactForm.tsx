@@ -41,7 +41,7 @@ export default function ContactForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Email của bạn"
-              className="bg-transparent border-b border-white/40 py-3 text-[3.6vw] md:text-[1.6vw] lg:text-[1.2vw] text-white placeholder-white/60 focus:outline-none focus:border-white transition-colors"
+              className="bg-transparent border-b border-white py-3 text-[3.6vw] md:text-[1.6vw] lg:text-[1.2vw] text-white placeholder-white focus:outline-none focus:border-white transition-colors"
             />
 
             <textarea
@@ -49,12 +49,12 @@ export default function ContactForm() {
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Lời nhắn của bạn"
               rows={4}
-              className="bg-transparent border-b border-white/40 py-3 text-[3.6vw] md:text-[1.6vw] lg:text-[1.2vw] text-white placeholder-white/60 focus:outline-none focus:border-white transition-colors resize-none"
+              className="bg-transparent border-b border-white py-3 text-[3.6vw] md:text-[1.6vw] lg:text-[1.2vw] text-white placeholder-white focus:outline-none focus:border-white transition-colors resize-none"
             />
 
             <button
               type="submit"
-              className="self-end mt-2 bg-theme text-white px-[5vw] py-[2vw] md:px-[4vw] md:py-[1.5vw] lg:px-[3.4vw] lg:py-[1.5vw] text-[3vw] md:text-[1.7vw] lg:text-[1vw] uppercase tracking-widest hover:opacity-90 transition-opacity cursor-pointer mt-10"
+              className="self-end mt-2 bg-theme text-white px-[4vw] py-[1.5vw] md:px-[3.2vw] md:py-[1.2vw] lg:px-[2.8vw] lg:py-[1.1vw] text-[3vw] md:text-[1.7vw] lg:text-[1vw] uppercase tracking-widest hover:opacity-90 transition-opacity cursor-pointer mt-10"
             >
               Gửi liên hệ
             </button>

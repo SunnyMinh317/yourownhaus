@@ -202,10 +202,10 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url('/web-texture.png');
-  background-size: 100%;
+  background-image: url('/white-wall-textures.jpg');
+  background-size: 60%;
   background-repeat: repeat;
-  opacity: 0.15;
+  opacity: 0.2;
   pointer-events: none;
   z-index: -1;
   background-blend-mode: multiply;

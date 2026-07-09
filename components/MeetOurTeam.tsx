@@ -19,7 +19,7 @@ export default function MeetOurTeam() {
     <section className="w-full px-8 md:px-16 lg:px-24 py-14 md:py-16 flex flex-col gap-14">
       {/* Heading */}
       <div className="reveal flex flex-col gap-4">
-        <h2 className="font-brasika text-fg leading-[1.05] text-[9vw] md:text-[6.5vw] lg:text-[5vw] text-balance">
+        <h2 className="font-brasika text-fg leading-[1.05] text-[8vw] md:text-[5.5vw] lg:text-[4.2vw] text-balance">
           Đội ngũ của chúng tôi
         </h2>
         <p className="text-[4vw] md:text-[2vw] lg:text-[1.5vw] text-fg/70 leading-relaxed">
